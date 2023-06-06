@@ -108,6 +108,8 @@ h1 {
 .expeditie {
   padding-top: 5vh;
   padding-bottom: 5vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 .textkaart-column {
   margin-bottom: 3vh;
@@ -454,7 +456,7 @@ h1 {
 
 /* Smartphones */
 /* Smartphones */
-@media (max-width: 780px) {
+@media (max-width: 480px) {
   #gallery {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -495,5 +497,11 @@ h1 {
     margin-left: 7vw;
     width: 70vw;
     mix-blend-mode: screen;
+  }
+  button .expeditie {
+    align-items: center;
+  }
+  .text {
+    text-align: center;
   }
 }
