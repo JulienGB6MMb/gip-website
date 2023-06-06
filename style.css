@@ -212,17 +212,8 @@ body {
 	column-gap:20px;
   }
   }
-  @media (max-width:800px){
-	#gallery{
-	-webkit-column-count:2;
-	-moz-column-count:2;
-	column-count:2;
-	  
-	-webkit-column-gap:20px;
-	-moz-column-gap:20px;
-	column-gap:20px;
-  }
-  }
+
+  
   #gallery img,#gallery video {
 	width:100%;
 	height:auto;
@@ -482,7 +473,7 @@ body {
 
 /* Smartphones */
 @media (max-width: 400px) {
-	
+
 	   header {
 		background-image: url("images/Achtergrond2.jpg");
 		background-size: cover;
@@ -553,30 +544,7 @@ body {
 	-moz-column-count:1;
 	column-count:1;
   } 
-  .icon-column {
-	text-align: center;
-	padding: 10px;
-	margin-bottom: 5vh;
-  }
-  .icon-column img {
-	width: 100%;
-	max-width: 400px; /* Pas dit aan op basis van je gewenste beeldgrootte */
-  }
-  .icon-column h3 {
-	margin-top: 10px;
-	margin-bottom: 5px;
-  } 
-  .icon-column p {
-	margin-bottom: 20px;
-  }
-  .icon-column img {
-	width: 100%;
-	max-width: 20vw; /* Pas dit aan op basis van je gewenste beeldgrootte */
-	border-radius: 50%;
-	object-fit: cover;
-	border: 2px solid #000;
-    border-radius: 50%
-  } 
+
 	}
 
     
