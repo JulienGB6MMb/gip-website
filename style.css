@@ -1,0 +1,568 @@
+/* Lettertype */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Mulish', sans-serif;
+	margin: 0; 
+    padding: 0; 
+	box-sizing: border-box;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap');
+  
+  
+  /*Tussentitels*/
+
+	h2 {
+	text-align: center; /* Centers the text */
+	color: #426f80;
+	margin-bottom: 3vh;
+  }
+  
+	h2::after {
+	content: ''; /* Creates the underline */
+	display: block;
+	width: 2em;
+	margin: 0 auto; /* Centers the underline */
+	border-bottom: 3px solid #426f80; /* Sets the style and color of the underline */
+  }
+
+  /* Header */
+
+  header {
+	background-image: url("images/Achtergrond.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+  }
+  .vertical-line {
+	border-left: 6px solid #426f80;
+	height: calc(34% - 10px);
+	position: absolute;
+	margin-left: 7vw;
+	mix-blend-mode: screen;
+  }  
+  h1 {
+	color: #426f80;
+	mix-blend-mode: screen;
+	font-size: 4rem;
+	margin-top: 0;
+	margin-bottom: -20px;
+	margin-left: 7vw;
+	font-family: "Mulish", sans-serif;
+  font-weight: 800;
+  }
+  
+  .headerimg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-top: -5px;
+	margin-bottom: 20px;
+	margin-left: 7vw;	
+	width: 28vw;
+	mix-blend-mode: screen;
+  }
+
+/*OverOns*/
+
+  .overons {
+	padding: 5vh 20vw 5vh; /* Voegt een marge van 40px toe aan de linkerkant en de rechterkant */
+	text-align: center; /* Centreert de tekst in de div */
+  }
+  
+/*OverOns Images*/
+
+  .image-wrapper {
+	display: flex;
+	width: 100vw;
+	height: 40vh;
+	overflow-y: hidden;
+  }
+  .image-container {
+	display: flex;
+	width: 100vw;
+	height: 40vh;
+	overflow-y: hidden;
+  }
+  .image-wrapper img {
+	flex: 1;
+	width: 100%;
+	object-fit: cover;
+  }
+  .content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  .container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+  }
+
+/*Expeditie*/
+
+  .expeditie {
+	padding-left: 20vw;
+	padding-right: 20vw;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+  }
+  .textkaart-column {
+	flex: 0 0 50%; /* Take up 50% of the width */
+	margin-bottom: 3vh;
+  }
+  .imagekaart-column {
+	flex: 0 0 50%; /* Take up 50% of the width */
+	border: 2px solid #515557;
+    border-radius: 5px;
+	margin-right: 20px; /* Margin between columns */
+	height: 20rem;
+	width: 20rem;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	margin-bottom: 3vh;
+  }
+  .text {
+	text-align: right;
+  }
+.kaart {
+	max-width: 100%;
+	height: auto;
+  }
+
+/*Icons*/
+
+  .icon-column {
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 5vh;
+  }
+  .icon-column img {
+	width: 100%;
+	max-width: 200px; /* Pas dit aan op basis van je gewenste beeldgrootte */
+  }
+  .icon-column h3 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+  } 
+  .icon-column p {
+	margin-bottom: 10px;
+  }
+  .icon-column img {
+	width: 100%;
+	max-width: 6vw; /* Pas dit aan op basis van je gewenste beeldgrootte */
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #000;
+    border-radius: 50%
+  }
+
+  /*Film*/
+
+  .film {
+	background-color: lightgray;
+	padding-left: 20vw;
+	padding-right: 20vw;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+  }
+  
+  .film .left-column {
+	text-align: left;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+  }
+  
+  .film .right-column img {
+	width: 14vw;
+	height: auto;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+  }
+
+  /*Gallery*/
+
+  #gallery{
+	-webkit-column-count:2;
+	-moz-column-count:2;
+	column-count:2;
+	
+	-webkit-column-gap:20px;
+	-moz-column-gap:20px;
+	column-gap:20px;
+	padding: 0 20vw;
+  }
+  @media (max-width:1200px){
+	#gallery{
+	-webkit-column-count:2;
+	-moz-column-count:2;
+	column-count:2;
+	  
+	-webkit-column-gap:20px;
+	-moz-column-gap:20px;
+	column-gap:20px;
+  }
+  }
+  @media (max-width:800px){
+	#gallery{
+	-webkit-column-count:2;
+	-moz-column-count:2;
+	column-count:2;
+	  
+	-webkit-column-gap:20px;
+	-moz-column-gap:20px;
+	column-gap:20px;
+  }
+  }
+  #gallery img,#gallery video {
+	width:100%;
+	height:auto;
+	margin: 4% auto;
+	cursor: pointer;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+  }
+  .modal-img,.model-vid{
+	width:100%;
+	height:auto;
+  }
+  .modal-body{
+	padding:0px;
+  }
+/*Footer*/
+
+.page-footer {
+	padding-left: 20vw;
+	padding-right: 20vw;
+}
+
+.main{
+	height: 50vh;
+  }
+  .hover-effect1 {
+	min-height: 20px;
+	background: #426f80;
+	text-align: center;
+  }
+  .hover-effect1 ul {
+   padding-top: 1px;
+  }
+  .hover-effect1 ul li {
+   display: inline-block;
+  }
+  .hover-effect1 ul li a {
+   font-size: 30px;
+   text-align: center;
+   color: #fff;
+   margin: 0px 10px;
+   line-height: 50px;
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   background:#426f80;
+   -webkit-transition: all .6s ease;
+   -moz-transition: all .6s ease;
+   -ms-transition: all .6s ease;
+   -o-transition: all .6s ease;
+   transition: all .6s ease;
+  }
+  .hover-effect1 ul li:hover a {
+	border-radius: 50%;
+	background: #426f80;
+   -moz-transform: rotate(360deg);
+   -webkit-transform: rotate(360deg);
+   -o-transform: rotate(360deg);
+   -ms-transform: rotate(360deg);
+   transform: rotate(360deg);
+  }
+  .showcase {
+	background: var(--primary-color);
+	color: #fff;
+	height: 100vh;
+	position: relative;
+  }
+  
+  .showcase:before {
+	content: '';
+	background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+  }
+  
+  .showcase .showcase-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+  }
+  
+  .showcase h1 {
+	font-size: 4rem;
+  }
+  
+  .showcase p {
+	font-size: 1.3rem;
+  }
+  
+   /*HamburgerMenu*/
+
+  .menu-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+  }
+  .menu-wrap .toggler {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+  }
+  .menu-wrap .hamburger {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 60px;
+	height: 60px;
+	padding: 1rem;
+	background: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .menu-wrap .hamburger > div {
+	position: relative;
+	flex: none;
+	width: 100%;
+	height: 2px;
+	background: #426f80;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s ease;
+  }
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	width: 100%;
+	height: 2px;
+	background: inherit;
+  }
+  .menu-wrap .hamburger > div::after {
+	top: 10px;
+  }
+  .menu-wrap .toggler:checked + .hamburger > div {
+	transform: rotate(135deg);
+	background: #fff;
+  }
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+	top: 0;
+	transform: rotate(90deg);
+	background: #fff;
+  }
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+	transform: rotate(225deg);
+	background: #fff;
+  }
+  .menu-wrap .toggler:checked ~ .menu {
+	visibility: visible;
+  }
+  .menu-wrap .toggler:checked ~ .menu > div {
+	transform: scale(1);
+	transition-duration: var(--menu-speed);
+  }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+	opacity: 1;
+	transition:  opacity 0.4s ease 0.4s;
+  }
+  .menu-wrap .menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .menu-wrap .menu > div {
+	background: var(--overlay-color);
+	border-radius: 50%;
+	width: 200vw;
+	height: 200vw;
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+	transition: all 0.4s ease;
+  }
+  .menu-wrap .menu > div > div {
+	text-align: center;
+	max-width: 90vw;
+	max-height: 100vh;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+  }
+  .menu-wrap .menu > div > div > ul > li {
+	list-style: none;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 1rem;
+  }
+  .menu-wrap .menu > div > div > ul > li > a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.4s ease;
+  }
+  :root {
+	--overlay-color: rgba(24, 39, 51 , 0.85);
+	--menu-speed: 0.75s;
+  }
+  
+  /*Buttons*/
+
+  .button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #426f80;
+	color: white;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	outline: none; /* Voeg deze regel toe om de outline te verwijderen */
+  }
+  .button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: #426f80;
+	transform: skewX(45deg);
+	transition: left 0.3s ease;
+  }
+  .button:hover {
+	background-color: white;
+	color: #426f80;
+  }
+  .button:hover::before {
+	left: 100%;
+  }
+
+/* Smartphones */
+@media (max-width: 480px) {
+	.gallery{
+		grid-template-columns: repeat(1, 1fr);
+		gap: 15px;
+		justify-content: center;
+		align-items: center;
+		padding-top: 5vh;
+		padding-bottom: 5vh;
+		margin-left: 20vw;
+		width: 75%;
+	   }
+	   header {
+		background-image: url("images/Achtergrond2.jpg");
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+	  }
+	  h1 {
+		color: #426f80;
+		mix-blend-mode: screen;
+		font-size: 3.3rem;
+		margin-top: 0;
+		margin-bottom: -20px;
+		margin-left: 7vw;
+		font-family: "Mulish", sans-serif;
+	  font-weight: 800;
+	  }
+	  .headerimg {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-top: -5px;
+		margin-bottom: 20px;
+		margin-left: 7vw;	
+		width: 70vw;
+		mix-blend-mode: screen;
+	  }
+
+	  .expeditie {
+		padding: 5vh 5vw; /* Adjust the padding as needed */
+	  }
+	
+	  .textkaart-column,
+	  .imagekaart-column {
+		flex: 0 0 100%; /* Take up 100% of the width */
+		margin-bottom: 3vh;
+	  }
+	
+	  .imagekaart-column {
+		margin-right: 0; /* Remove the margin between columns */
+		margin-bottom: 0; /* Remove the margin between image and text */
+	  }
+	
+	  .text {
+		text-align: right; /* Adjust the text alignment as needed */
+		display:none;
+	  }
+	
+	  .kaart {
+		margin-bottom: 3vh;
+	  }
+	
+	  .textkaart-column {
+		order: 1; /* Change the order to display text below the image */
+	  }
+	  body {
+		font-family: 'Mulish', sans-serif;
+		margin: 0; 
+		padding: 0; 
+		box-sizing: border-box;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+	  }	
+	  #gallery{
+	-webkit-column-count:1;
+	-moz-column-count:1;
+	column-count:1;
+  }  
+	}
+
+    
+
