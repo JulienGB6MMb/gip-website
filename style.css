@@ -102,6 +102,7 @@ h1 {
   height: 87%;
   overflow: hidden;
   position: relative;
+  
 }
 
 .content_inner_slider {
@@ -116,8 +117,7 @@ h1 {
   object-fit: cover;
 }
 
-.auto_slide {
-}
+
 
 
 /*Expeditie*/
