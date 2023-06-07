@@ -48,10 +48,10 @@ header {
 h1 {
   color: #426f80;
   mix-blend-mode: screen;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-top: 0;
   margin-bottom: -20px;
-  margin-left: 7vw;
+  margin-left: 9vw;
   font-family: "Mulish", sans-serif;
   font-weight: 800;
 }
@@ -62,7 +62,7 @@ h1 {
   height: auto;
   margin-top: -5px;
   margin-bottom: 20px;
-  margin-left: 7vw;
+  margin-left: 9vw;
   width: 28vw;
   mix-blend-mode: screen;
 }
@@ -169,14 +169,14 @@ h1 {
   padding-bottom: 5vh;
 }
 
-.film .left-column {
+.film {
   text-align: left;
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
 
-.film .right-column img {
-  width: 14vw;
+.film img {
+  width: 20vw;
   height: auto;
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -465,6 +465,13 @@ h1 {
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
+  }
+  .vertical-line {
+    border-left: 6px solid #426f80;
+    height: calc(25% - 10px);
+    position: absolute;
+    margin-left: 4vw;
+    mix-blend-mode: screen;
   }
 
   header {
