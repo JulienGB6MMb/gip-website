@@ -456,7 +456,7 @@ h1 {
 
 /* Smartphones */
 /* Smartphones */
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   #gallery {
     -webkit-column-count: 1;
     -moz-column-count: 1;
