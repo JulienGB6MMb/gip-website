@@ -34,10 +34,12 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
+  overflow: hidden; /* Voorkomt horizontaal scrollen */
 }
+
 .vertical-line {
   border-left: 6px solid #426f80;
   height: calc(34% - 10px);
@@ -45,6 +47,7 @@ header {
   margin-left: 7vw;
   mix-blend-mode: screen;
 }
+
 h1 {
   color: #426f80;
   mix-blend-mode: screen;
@@ -76,32 +79,46 @@ h1 {
 
 /*OverOns Images*/
 
-.image-wrapper {
-  display: flex;
-  width: 100vw;
-  height: 40vh;
-  overflow-y: hidden;
+:root {
+  --color-text: #2c3e50;
+  --color-text-light: #34495e;
+  --color-white: #ecf0f1;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--color-grey-light-2);
 }
-.image-container {
+
+.carousel {
+  width: 100vw; /* Aangepast naar 100vw */
+  height: 60vh;
   display: flex;
-  width: 100vw;
-  height: 40vh;
-  overflow-y: hidden;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
-.image-wrapper img {
-  flex: 1;
+
+.carousel_slider {
   width: 100%;
+  height: 87%;
+  overflow: hidden;
+  position: relative;
+}
+
+.content_inner_slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.img {
+  min-width: 50vw;
+  height: 100%;
   object-fit: cover;
 }
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.auto_slide {
 }
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
-}
+
 
 /*Expeditie*/
 
@@ -148,7 +165,7 @@ h1 {
   margin-bottom: 5px;
 }
 .icon-column p {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 .icon-column img {
   width: 100%;
@@ -273,7 +290,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  
 }
 
 .showcase .showcase-inner {
@@ -299,7 +316,6 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 .menu-wrap .toggler {
   position: absolute;
@@ -315,7 +331,6 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
   width: 60px;
   height: 60px;
   padding: 1rem;
@@ -339,7 +354,6 @@ h1 {
 .menu-wrap .hamburger > div::after {
   content: "";
   position: absolute;
-  z-index: 1;
   top: -10px;
   width: 100%;
   height: 2px;
@@ -468,7 +482,7 @@ h1 {
   }
   .vertical-line {
     border-left: 6px solid #426f80;
-    height: calc(25% - 10px);
+    height: calc(27% - 10px);
     position: absolute;
     margin-left: 4vw;
     mix-blend-mode: screen;

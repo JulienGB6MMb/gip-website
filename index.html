@@ -21,9 +21,8 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <!-- Navbar -->
-    <nav>
+    <header>
+      <nav>
       <!-- Hamburgermenu -->
       <div class="menu-wrap">
         <input type="checkbox" class="toggler" />
@@ -44,9 +43,6 @@
 
       <!-- Hamburgermenu -->
     </nav>
-
-    <!-- Header -->
-    <header>
       <div class="content">
         <span class="vertical-line"></span>
 
@@ -56,6 +52,10 @@
         </div>
       </div>
     </header>
+  <body>
+    <!-- Navbar -->
+    <!-- Header -->
+
     <div class="overons">
       <h2>OVER ONS</h2>
 
@@ -71,23 +71,17 @@
       <button class="button">Klik hier</button>
     </div>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <div class="image-wrapper">
-            <div class="image-container">
-              <img src="images/overons1.jpeg" alt="Afbeelding 1" />
-            </div>
-            <div class="image-container">
-              <img src="images/overons2.jpg" alt="Afbeelding 2" />
-            </div>
-            <div class="image-container">
-              <img src="images/overons3.jpg" alt="Afbeelding 3" />
-            </div>
-          </div>
+    <section class="carousel">
+      <div class="carousel_slider">
+        <div class="content_inner_slider">
+          <img src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=30" alt="" class="img">
+          <img src="https://images.unsplash.com/photo-1519500099198-fd81846b8f03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=30" alt="" class="img">
+          <img src="https://images.unsplash.com/photo-1517052269751-4ae3ad86cc59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=30" alt="" class="img">
+          <img src="https://images.unsplash.com/photo-1459909633680-206dc5c67abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=30" alt="" class="img">
+          <img src="https://images.unsplash.com/photo-1519355673725-fe7ac3f995f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=30" alt="" class="img">
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="container expeditie">
       <h2>ONZE EXPEDITIE</h2>
@@ -302,6 +296,7 @@
     </footer>
 
     <!-- JavaScript Bootstrap -->
+    <script src="app.js"></script>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
