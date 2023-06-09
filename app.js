@@ -30,3 +30,25 @@ window.onload = function () {
 
   setInterval(handleNextImage, timer);
 };
+
+
+$(document).ready(function() {
+  // Wanneer er op een afbeelding wordt geklikt
+  $('#gallery img').click(function() {
+    var imgSrc = $(this).attr('src');
+
+    // De bron van de afbeelding in de modale inhoud bijwerken
+    $('#modalImg').attr('src', imgSrc);
+
+    // Het modaalvenster tonen
+    $('#myModal').show();
+  });
+
+  // Wanneer er op het modaalvenster wordt geklikt
+  $('#myModal').click(function() {
+    // Het modaalvenster verbergen
+    $('#myModal').hide();
+  });
+});
+
+
