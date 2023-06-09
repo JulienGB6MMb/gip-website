@@ -117,6 +117,49 @@ h1 {
   object-fit: cover;
 }
 
+/* Mediaquery voor gsm */
+@media (max-width: 599px) {
+  .carousel_slider {
+    /* Verberg de scrollbalk op mobiele apparaten */
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .content_inner_slider {
+    /* Andere CSS-regels voor de innerlijke slider */
+  
+    scroll-snap-align: start;
+  }
+
+  .img {
+    /* Andere CSS-regels voor de afbeeldingen */
+  
+    width: 100%;
+    min-width: auto;
+  }
+}
+/* Mediaquery voor computer */
+@media (min-width: 1024px) {
+  .carousel_slider {
+    /* Andere CSS-regels voor de slider */
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .img {
+    /* Andere CSS-regels voor de afbeeldingen */
+  
+    width: 100%;
+    min-width: auto;
+  }
+}
 
 
 
@@ -316,6 +359,7 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 .menu-wrap .toggler {
   position: absolute;
@@ -331,6 +375,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 60px;
   height: 60px;
   padding: 1rem;
@@ -354,6 +399,7 @@ h1 {
 .menu-wrap .hamburger > div::after {
   content: "";
   position: absolute;
+  z-index: 1;
   top: -10px;
   width: 100%;
   height: 2px;
@@ -402,8 +448,8 @@ h1 {
 .menu-wrap .menu > div {
   background: var(--overlay-color);
   border-radius: 50%;
-  width: 300vw;
-  height: 300vw;
+  width: 250vw;
+  height: 250vw;
   display: flex;
   flex: none;
   align-items: center;
@@ -413,7 +459,7 @@ h1 {
 }
 .menu-wrap .menu > div > div {
   text-align: center;
-  max-width: 90vw;
+  max-width: 100vw;
   max-height: 100vh;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -433,6 +479,7 @@ h1 {
   --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
 }
+
 
 /*Buttons*/
 
