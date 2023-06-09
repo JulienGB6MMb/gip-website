@@ -17,12 +17,19 @@ window.onload = function () {
       } else {
         counter++;
       }
-    } else {
-      // Tablet and desktop: Show 2 images at a time
+    } else if (window.innerWidth >= 600 && window.innerWidth < 1024) {
+      // Tablet: Show 2 images at a time
       if (counter >= totalImages - 2) {
         counter = 0;
       } else {
         counter += 2;
+      }
+    } else {
+      // Desktop: Show 3 images at a time
+      if (counter >= totalImages - 3) {
+        counter = 0;
+      } else {
+        counter += 3;
       }
     }
     moveSliderToIndex(counter);
@@ -30,6 +37,7 @@ window.onload = function () {
 
   setInterval(handleNextImage, timer);
 };
+
 
 
 $(document).ready(function() {
@@ -49,6 +57,6 @@ $(document).ready(function() {
     // Het modaalvenster verbergen
     $('#myModal').hide();
   });
-});
+})
 
 
