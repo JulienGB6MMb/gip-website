@@ -556,7 +556,7 @@ h1 {
   }
   .vertical-line {
     border-left: 6px solid #426f80;
-    height: calc(2% - 10px);
+    height: calc(1% - 10px);
     position: absolute;
     margin-left: 4vw;
     mix-blend-mode: screen;
