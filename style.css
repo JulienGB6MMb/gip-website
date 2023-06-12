@@ -137,7 +137,7 @@ h1 {
     align-items: center;
     position: relative;
     overflow: hidden;
-    margin-top: 5vh;
+    margin-top: 10vh;
   }
   .carousel_slider {
     /* Verberg de scrollbalk op mobiele apparaten */
