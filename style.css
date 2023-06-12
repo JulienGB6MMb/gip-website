@@ -81,7 +81,7 @@ h1 {
 /*OverOns Images*/
 
 .carousel {
-  width: 100vw;
+  width: 99vw;
   height: 50vh;
   display: flex;
   flex-direction: column;
