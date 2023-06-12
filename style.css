@@ -80,15 +80,6 @@ h1 {
 
 /*OverOns Images*/
 
-:root {
-  --color-text: #2c3e50;
-  --color-text-light: #34495e;
-  --color-white: #ecf0f1;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-  --line: 1px solid var(--color-grey-light-2);
-}
-
 .carousel {
   width: 100vw;
   height: 50vh;
@@ -96,34 +87,31 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden; /* Add this line to hide any overflowing content */
+  overflow: hidden;
 }
 
 .carousel_slider {
-  width: 100%; /* Remove the height property */
-  overflow: hidden;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .content_inner_slider {
-  width: calc(100% * 3); /* Set the width to accommodate three slides */
+  width: 100%;
   height: 100%;
   display: flex;
 }
 
 .carousel img {
-  min-width: 100vw; /* Set the minimum width to 100vw */
+  width: calc(100% / 3);
   height: 100%;
   object-fit: cover;
 }
 
-
-/* Mediaquery voor gsm */
-@media (max-width: 599px) {
+@media (max-width: 1023px) {
   .carousel_slider {
-    /* Verberg de scrollbalk op mobiele apparaten */
-    overflow: hidden;
-    display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
@@ -132,37 +120,36 @@ h1 {
   }
 
   .content_inner_slider {
-    /* Andere CSS-regels voor de innerlijke slider */
-  
     scroll-snap-align: start;
   }
 
   .carousel img {
-    /* Andere CSS-regels voor de afbeeldingen */
-  
-    width: 100%;
+    width: 100vw;
     min-width: auto;
   }
 }
-/* Mediaquery voor computer */
-@media (min-width: 1024px) {
+@media (max-width: 599px) {
   .carousel_slider {
-    /* Andere CSS-regels voor de slider */
+    /* Verberg de scrollbalk op mobiele apparaten */
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    margin-top: 20vh;
   }
 
   .content_inner_slider {
     /* Andere CSS-regels voor de innerlijke slider */
-    width: calc(100vw * 3);
+    width: 300%; /* Set the width to accommodate three slides */
+    scroll-snap-type: x mandatory;
   }
 
   .carousel img {
     /* Andere CSS-regels voor de afbeeldingen */
-    width: calc(100vw / 3);
-    min-width: 0;
+    width: 100vw; /* Set the width to 33.3333% to accommodate three images */
+    min-width: auto;
   }
 }
 
@@ -231,7 +218,6 @@ h1 {
   padding-right: 20vw;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  height: 100vh;
 }
 
 .film {

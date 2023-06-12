@@ -1,31 +1,24 @@
-window.onload = function () {
+window.addEventListener('load', function () {
   const carouselInnerSlider = document.querySelector('.content_inner_slider');
   const carouselImages = document.querySelectorAll('.content_inner_slider > img');
   const totalImages = carouselImages.length;
   let counter = 0;
-  const timer = 1500;
+  const timer = 3000; // Aanpassen naar gewenste interval (in milliseconden)
 
   function moveSliderToIndex(index) {
-    carouselInnerSlider.style.transform = `translateX(-${index * 100}%)`;
+    carouselInnerSlider.style.transform = `translateX(-${index * 100 / totalImages}%)`;
   }
 
   function handleNextImage() {
     if (window.innerWidth < 600) {
-      // Mobile: Show 1 image at a time
+      // Mobiel: Toon 1 afbeelding per keer
       if (counter === totalImages - 1) {
         counter = 0;
       } else {
         counter++;
       }
-    } else if (window.innerWidth >= 600 && window.innerWidth < 1024) {
-      // Tablet: Show 2 images at a time
-      if (counter >= totalImages - 2) {
-        counter = 0;
-      } else {
-        counter += 2;
-      }
     } else {
-      // Desktop: Show 3 images at a time
+      // Desktop: Toon 3 afbeeldingen per keer
       if (counter >= totalImages - 3) {
         counter = 0;
       } else {
@@ -36,7 +29,8 @@ window.onload = function () {
   }
 
   setInterval(handleNextImage, timer);
-};
+});
+
 
 
 
