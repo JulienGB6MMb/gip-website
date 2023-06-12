@@ -129,6 +129,15 @@ h1 {
   }
 }
 @media (max-width: 599px) {
+  .carousel {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
   .carousel_slider {
     /* Verberg de scrollbalk op mobiele apparaten */
     overflow: hidden;
@@ -137,7 +146,6 @@ h1 {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    margin-top: 20vh;
   }
 
   .content_inner_slider {
