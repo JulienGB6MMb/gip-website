@@ -184,10 +184,33 @@ header {
   }
   
   .image-text-container img {
-    width: 55vw;
+    width: 20vw;
     height: auto;
     margin-right: 20px;
   }
+
+  .video {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .video iframe {
+    width: 640px;
+    height: 360px;
+  }
+  
+  .video h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .video p {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+
+  
   
   @media (max-width: 680px) {
     .image-text-container img {
