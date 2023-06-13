@@ -182,9 +182,25 @@ header {
     align-items: center;
     margin-bottom: 20px;
   }
-
+  
   .image-text-container img {
-    width: 20vw;
+    width: 55vw;
     height: auto;
     margin-right: 20px;
+  }
+  
+  @media (max-width: 680px) {
+    .image-text-container img {
+      width: 55vw;
+      height: auto;
+      margin-right: 0px;
+    }
+    .image-text-container {
+      flex-direction: column;
+    }
+  
+    .image-text-container img {
+      order: -1;
+      margin-bottom: 20px;
+    }
   }
