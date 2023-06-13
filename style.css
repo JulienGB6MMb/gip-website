@@ -518,7 +518,11 @@ h1 {
   transition: background-color 0.3s ease, color 0.3s ease;
   outline: none; /* Voeg deze regel toe om de outline te verwijderen */
 }
-a {
+.expeditie a {
+  color: white;
+  font-size: 16px;
+}
+.lessen a {
   color: white;
   font-size: 16px;
 }
