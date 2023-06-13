@@ -190,13 +190,12 @@ header {
   }
 
   .video {
-    margin: 20px;
     text-align: center;
   }
   
   .video iframe {
-    width: 640px;
-    height: 360px;
+    width: 50vw;
+    height: 58vh;
   }
   
   .video h2 {
@@ -225,5 +224,9 @@ header {
     .image-text-container img {
       order: -1;
       margin-bottom: 20px;
+    }
+    .video iframe {
+      width: 60vw;
+      height: 30vh;
     }
   }
