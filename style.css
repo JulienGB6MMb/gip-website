@@ -81,7 +81,7 @@ h1 {
 /*OverOns Images*/
 
 .carousel {
-  width: 99vw;
+  width: 98.7vw;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -663,3 +663,4 @@ input[type="submit"] {
 
 
 
+ 
