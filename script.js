@@ -42,6 +42,7 @@ $(document).ready(function () {
     $(".container .sidebar").toggleClass("active");
   });
 });
+
 $(document).ready(function () {
   $("img").click(function () {
     var t = $(this).attr("src");
@@ -59,12 +60,34 @@ $(document).ready(function () {
     );
     $("#myModal").modal();
   });
-}); //EOF Document.ready
+});
+
+// Voeg klikgebeurtenis toe aan de hamburger-menu-items
 const menuItems = document.querySelectorAll(".menu-wrap .menu > div > div > ul > li > a");
+const toggler = document.getElementById("hamburgerToggle");
+
 menuItems.forEach((menuItem) => {
   menuItem.addEventListener("click", () => {
     // Sluit de hamburgermenu
-    const toggler = document.querySelector(".menu-wrap .toggler");
+    toggler.checked = false;
+  });
+});
+
+// Voeg klikgebeurtenis toe aan de sectielinks in het hamburgermenu
+const sectionLinks = document.querySelectorAll(".menu-wrap .menu > div > div > ul > li > a[href^='#']");
+
+sectionLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Voorkom standaard scrollgedrag
+
+    const target = document.querySelector(link.getAttribute("href"));
+    const yOffset = -60; // Aanpassen aan je ontwerplayout
+
+    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+
+    // Sluit de hamburgermenu
     toggler.checked = false;
   });
 });
