@@ -1,7 +1,7 @@
 header {
     background-color: #ffffff;
     padding: 10px;
-    text-align: center;
+    text-align: left;
   }
   h2 {
     text-align: center; /* Centers the text */
@@ -17,7 +17,7 @@ header {
     border-bottom: 3px solid #426f80; /* Sets the style and color of the underline */
   }
   .logo img {
-    height: 6vh;
+    height: 7vh;
     width: auto;
   }
 .texten {
@@ -175,5 +175,3 @@ header {
     padding: 10px;
     color: #fff;
   }
-  
-  
