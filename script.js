@@ -60,3 +60,11 @@ $(document).ready(function () {
     $("#myModal").modal();
   });
 }); //EOF Document.ready
+const menuItems = document.querySelectorAll(".menu-wrap .menu > div > div > ul > li > a");
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener("click", () => {
+    // Sluit de hamburgermenu
+    const toggler = document.querySelector(".menu-wrap .toggler");
+    toggler.checked = false;
+  });
+});
